@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: lightgray;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        appearance: none;
+    width: 50%;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+    height: 2px;
+    background: grey;
+    }
+    input[type=range]::-webkit-slider-thumb {
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background: grey;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    }
+
+    input{
+        margin-top: 10px;
+    }
+
+    label{
+        text-align: right;
+    }
+    form{
+        text-align: right;
+        margin-right: 40%;
+    }
+
+
+</style>
+<body>
+    <h1 style="border-bottom: 1px solid; color: cornflowerblue; font-weight: 500;">
+        Chào mừng bạn đến với tạp chí HTML5 & CSS3
+    </h1>
+    <form action="" >
+        <div>
+            <label for="">Tên đăng nhập: </label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="">Mật khẩu: </label>
+            <input type="password" name="" id="">
+        </div>
+        <div>
+            <label for="">Email: </label>
+            <input type="email" name="" id="">
+        </div>
+        <div>
+            <label for="">Thành phố: </label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="">Độ tuổi trung bình</label>
+            <input type="range" name="" id="">
+        </div>
+        <div>
+            <p>Bạn muốn theo dõi bài viết từ chủ đề nào?</p>
+            <div>
+            <input type="checkbox" name="" id=""> <label for="">HTML5 cơ bản</label> 
+            <input type="checkbox" name="" id=""><label for="">CSS3 cơ bản</label>
+            <br>
+            <input type="checkbox" name="" id=""> <label for="">HTML5 nâng cao</label> 
+            <input type="checkbox" name="" id=""><label for="">CSS3 nâng cao</label>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
