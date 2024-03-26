@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cú pháp tương tác css với html</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Cú pháp tương tác css với html 
+        </h1>
+    </header>
+    <section>
+        <h2>
+            Css tương tác với tên thẻ HTML
+        </h2>
+        <p>Thẻ đoạn văn 1</p>
+        <p>Thẻ đoạn văn 2</p>
+        <p>Thẻ đoạn văn 3</p>
+        <style>
+            h2{
+                color: blueviolet;
+            }
+            p{
+                background-color: beige;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>Css tương tác với thuộc tính id của thẻ HTML</h2>
+        <div id="div1">
+            <p>Khối1</p>
+        </div>
+        <div id="div2">
+            <p>Khối2</p>
+        </div>
+        <style>
+            /* Tương tác thông qua thuộc tính id  */
+            #div1{
+                margin: 1rem;
+                padding: 1rem;
+                border: 1px solid red;
+            }
+            #div2{
+                border: 2px dotted violet;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>Css tương tác thông qua thuộc tính class của thẻ HTML</h2>
+        <div class="div">
+            <p class="noi-dung">Nội dung khối div </p>
+        </div>
+        <div class="div">
+            <p class="noi-dung">Nội dung khối div </p>
+        </div>
+        <div class="div">
+            <p class="noi-dung">Nội dung khối div </p>
+        </div>
+        <style>
+            /* Css tương tác thông qua thuộc tính class của thẻ HTML  */
+            .div{
+                width: 10rem;
+                border: 2px dashed green;
+                height: 10rem;
+                margin-top: .5rem;
+            }
+        </style>
+    </section>
+</body>
+</html>
