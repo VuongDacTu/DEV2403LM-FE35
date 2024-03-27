@@ -66,6 +66,44 @@
                 height: 10rem;
                 margin-top: .5rem;
             }
+            .noi-dung{
+                background-color: violet;
+                color: yellow;
+                padding: .5rem 1rem;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>Tương tác thông qua giá trị của thuộc tính</h2>
+        <div>
+            <p data-name="A1">Đoạn 1</p>
+            <p data-name="A2">Đoạn 2</p>
+            <p data-name="A1">Đoạn 3</p>
+            <p data-name="A2">Đoạn 4</p>
+        </div>
+        <div>
+            <form action="">
+                <input type="text" name="txt" id="txt1">
+                <input type="text" name="txt" id="txt1">
+                <input type="text" name="txt" id="txt1">
+                <input type="button" name="txt" id="txt1">
+            </form>
+        </div>
+        <style>
+            /* Tương tác thông qua giá trị của thuộc tính */
+            p[data-name="A1"]{
+                font-size: 1.5rem;
+            }
+            p[data-name="A2"]{
+                font-size: .7rem;
+                padding: 1rem;
+            }
+            input[type="text"]{
+                border: 1px solid #ccc;
+                width: 200px;
+                margin: .5rem 1rem;
+                padding: .5rem;
+            }
         </style>
     </section>
 </body>
