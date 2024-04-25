@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng mã js vào trang html</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>
+            Nhúng mã js vào trang html
+        </h1>
+    </section>
+    <section id="zone2">
+        <p>Javascript inline - viết mã js trong thuộc tính sự kiện</p>
+        <button onclick="alert('Hello, JS')">Click here</button>
+    </section>
+    <section id="zone3">
+        <p>Thực thi mã lệnh js trong cặp thẻ script</p>
+        <button onclick="fn_Test()">click here</button>
+    </section>
+    <section id="zone4">
+        <h2>
+            nhúng file js vào trang html
+        </h2>
+        <button onclick="fn_bgColor()">gọi hàm</button>
+    </section>
+    <script src="./js/ex-1.js"></script>
+    <script>
+        // câu lẹnh bằng ngôn ngữ js
+        const fn_Test = () => {
+            alert("Câu lệnh js");
+            console.log("Câu lệnh js")
+        }
+        fn_Test();
+    </script>
+</body>
+</html>

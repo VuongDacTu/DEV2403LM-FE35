@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - tương tác với các phần tử html</title>
+</head>
+<body>
+    <header>
+        <h1>DOM - tương tác với các phần tử html</h1>
+    </header>
+    <section>
+        <h2 id="fn1">DOM - tương tác với html thông qua thuộc tính id</h2>
+        <button onclick="fn_DOM1()">Click</button>
+    </section>
+    <section>
+        <h2 id="fn2">DOM - tương tác với html thông qua tên thẻ - tag name</h2>
+        <button onclick="fn_DOM2()">Click</button>
+    </section>    
+    <section>
+        <h2 class="abc">DOM - tương tác với html thông qua thuộc tính class</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis accusamus eligendi asperiores fugiat maxime corrupti expedita magnam. Autem repellat doloremque reprehenderit nam molestiae fugit repudiandae ipsum totam eligendi voluptate.</p>
+        <button onclick="fn_DOM3()">Click - class</button>
+    </section>
+    <section id="zone1">
+        <h2>DOM - tương tác với html thông qua css selector</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis accusamus eligendi asperiores fugiat maxime corrupti expedita magnam. Autem repellat doloremque reprehenderit nam molestiae fugit repudiandae ipsum totam eligendi voluptate.</p>
+        <button onclick="fn_DOM4()">Click - querySelectAll</button>
+    </section>
+    <!-- script -->
+    <script>
+        // DOM tương tác với html thông qua thuộc tính id
+        const fn_DOM1 = () =>{
+            let element = document.getElementById("fn1")
+            console.log(element);
+            element.style.color = "Blue";
+            fn1.style.backgroundColor="red"
+            
+        }
+        // DOM - tương tác với html thông qua tên thẻ - tag name
+        const fn_DOM2 = () =>{
+            let element = document.getElementsByTagName("h2")
+            console.log(element);
+            element[1].style.backgroundColor= "#00f2f1"
+
+        }
+        // DOM - tương tác với html thông qua thuộc tính class
+        const fn_DOM3 = () =>{
+            let element = document.getElementsByClassName("abc");
+            console.log(element);
+            element[0].style.backgroundColor = "#ccc"
+        }
+        // DOM - tương tác với html thông qua css selector
+        const fn_DOM4 = () => {
+            let element = document.querySelectorAll("#zone1 h2")
+            console.log(element);
+            element[0].style.color = "red"
+        }
+    </script>
+</body>
+</html>

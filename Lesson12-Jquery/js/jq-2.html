@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng thư viện Jquery trực tiếp trên cloud</title>
+</head>
+<body>
+    <header>
+        <h1>Sử dụng thư viện Jquery trực tiếp trên cloud</h1>
+        <pre></pre>
+    </header>
+    <section>
+        <h2>Test jquery</h2>
+        <a href="#">click here</a>
+    </section>
+    <!-- nhúng thư viện jquery từ cloud -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- mã lệnh xử lý js với query -->
+    <script>
+        $(document).ready(function(){
+            // jquery ready
+            $("a").click(function(){
+                alert($(this));
+                console.log($(this).text());
+                $(this).text("OK bạn vừa click")
+            });
+        });
+    </script>
+</body>
+</html>

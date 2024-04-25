@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranform / transision / tranlate</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        animation: move 5s infinite;
+    }
+    img:hover {
+         width: 500px;
+    }
+    @keyframes move{
+        0%{transform: rotate(50deg);
+            background-color: antiquewhite;}
+        25%{translate: 500%;
+            transition: width 4s;
+            background-color: aquamarine;
+            }
+        50%{transform: rotateX(100deg);
+            background-color: cadetblue;}
+        100%{translate: 0%;
+            background-color: blueviolet;
+            border-radius: 50%;
+        }
+    }
+
+</style>
+<body>
+    <section>
+        <h1>Tranform / transision / tranlate</h1>
+        <section style="display: flex; margin-top: 100px;" >
+            <img style="margin-top: 50px;" src="./goku-removebg-preview.png" height="200px" alt="">
+        <div></div>
+        </section>
+    </section>
+</body>
+</html>

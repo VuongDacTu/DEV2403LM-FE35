@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Các sự kiện thông dụng trong jquery</title>
+    </head>
+
+    <body>
+        <h1>Các sự kiện thông dụng trong jquery</h1>
+        <div>
+            <form action="" method="post">
+                <p>
+                    UserName:
+                    <input type="text" name="user" id="user">
+                    <span>(*)</span>
+                </p>
+                <p>
+                    Password:
+                    <input type="password" name="password" id="password">
+                    <span>(*)</span>
+                </p>
+                <button>submit</button>
+            </form>
+        </div>
+        <!-- nhúng thư viện jquery từ cloud -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- mã lệnh xử lý js với query -->
+        <script>
+        $(document).ready(function () { 
+            $("input").focus(function(){
+                $(this).css("background-color","yellow")
+            }).blur(function(){
+                $(this).css("background-color","")
+            })
+            $("button").click(function(){
+                // lấy giá trị trên form
+                let user = $("#user").val()
+                let pass = $("#password").val()
+                if(user == ""){
+                    $("#user + span").text("Chưa nhập user").css("color","red")
+                }else{
+                    $("#user + span").text("OK").css("color","green")
+                }
+                if(pass == ""){
+                    $("#password + span").html("<i>Chưa nhập password</i>").css("color","red")
+                }else{
+                    $("#password + span").text("OK").css("color","green")
+                }
+                return false
+            })
+            // change, keyup, kedown
+            $("input").keyup(function(){
+                let gt = $(this).val();
+                let id = $(this).attr("id")
+                if(gt == ""){
+                    $("#"+id+"+ span").text("Bạn chưa nhập dữ liệu")
+                }else{
+                    $("#"+id+"+ span").text("OK")
+                }
+            })
+            $("input").change(function(){
+                alert($(this).val())
+            })
+        });
+    </script>
+    </body>
+
+</html>

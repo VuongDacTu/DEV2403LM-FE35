@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jquery tương tác với các thành phần trên html</title>
+        <style>
+        #a{
+            background-color: aliceblue;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>query tương tác với các thành phần trên html</h1>
+            <p>p trong header</p>
+        </header>
+        <section id="zone1">
+            <h2>Test jquery tương tác thông qua id</h2>
+            <p>Khi hover đến vùng này thì tô màu nền cho vùng bằng jquery</p>
+        </section>
+        <section>
+            <h2>Tag html</h2>
+            <button class="btn">Class Name</button>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Doloribus ullam, deleniti reprehenderit modi laudantium
+                    dicta non rem adipisci aut placeat quas expedita sequi
+                    cupiditate fugit alias sunt nostrum unde ea!</p>
+            </div>
+        </section>
+        <!-- nhúng thư viện jquery từ cloud -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- mã lệnh xử lý js với query -->
+        <script>
+        $(document).ready(function(){
+            // jquery ready
+            $("#zone1").hover(function(){
+                $(this).css({
+                    "background-color":"#ccc",
+                    "cursor":"pointer"                
+                })
+            })
+            $("h2").click(function(){
+                alert("Bạn vừa click vào thẻ h2")
+            })
+            $(".btn").hover(function(){
+                $(this).css({
+                    "font-size" : "100px"
+                })
+            },function(){
+                $(this).css({
+                    "font-size" : "50px"
+                })
+            })
+            $("div p").click(function(){
+                console.log("Bạn vừa click đến thẻ p trong thẻ div");
+            })
+        });
+    </script>
+    </body>
+</html>

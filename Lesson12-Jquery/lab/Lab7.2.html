@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-left: 1rem;
+    }
+    ul{
+        display: flex;
+    }
+</style>
+<body>
+    <header>
+        <h1>Chọn màu chữ</h1>
+        <ul>
+            <li data-color="red"><a href="#">Đỏ</a></li>
+            <li data-color="blue"><a href="#">Xanh</a></li>
+            <li data-color="yellow"><a href="#">Vàng</a></li>
+            <li data-color="grey"><a href="#">Ghi</a></li>
+            <li data-color="purple"><a href="#">Tím</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2>Lập trình với PHP</h2>
+    </section>
+        <!-- nhúng thư viện jquery từ cloud -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- mã lệnh xử lý js với query -->
+        <script>
+            $(document).ready(function(){
+                $("li").click(function(){
+                    let color = $(this).attr("data-color")
+                    $("h2").css({
+                        "color":color
+                    })
+                })
+            });
+        </script>
+</body>
+</html>

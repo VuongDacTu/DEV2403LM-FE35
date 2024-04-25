@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check Form</title>
+        <style>
+      .error {
+        color: red;
+        font-style: italic;
+      }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Check Form</h1>
+            <pre>
+            - Kiểm tra khi người dùng chưa nhập dữ liệu hiển thị thông báo
+        </pre>
+        </header>
+        <section id="zone1">
+            <form action method="post">
+                <label for="user">UserName</label>
+                <div>
+                    <input type="text" name="user" id="user" />
+                    <span id="errUser" class="error">(*)</span>
+                </div>
+                <div>
+                    <label for="pass">Password</label>
+                    <div>
+                        <input type="text" name="pass" id="pass" />
+                        <span id="errPass" class="error">(*)</span>
+                    </div>
+                </div>
+                <button onclick="return checkLogin()">Login</button>
+            </form>
+        </section>
+        <script>
+      const checkLogin = () => {
+        let err = []; // lưu trữ lỗi
+        let user = document.getElementById("user");
+        let pass = document.getElementById("pass");
+        let errUser = document.getElementById("errUser");
+        let errPass = document.getElementById("errPass");
+        if (user.value.trim() == "") {
+          errUser.innerText = "Bạn chưa nhập user name";
+          err[0] = "Bạn chưa nhập user name";
+          errUser.style.color = "Red";
+        } else {
+          errUser.innerText = "OK";
+          errUser.style.color = "Green";
+          err.splice(0, 1);
+        }
+        if (pass.value.trim() == "") {
+          errPass.innerText = "Bạn chưa nhập password";
+          errPass.style.color = "Red";
+          err[0] = "Bạn chưa nhập password";
+        } else {
+          errPass.innerText = "OK";
+          errPass.style.color = "Green";
+          err.splice(0, 1);
+        }
+
+        // console.log(err);
+        return false;
+      };
+    </script>
+    </body>
+</html>

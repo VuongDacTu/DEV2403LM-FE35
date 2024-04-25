@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    font-family: Gotham-Medium;
+}
+ul{
+    list-style: none;
+}
+header{
+    background-color: #fff;
+}
+body{
+    background-color: #ccc;
+}
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+}
+/* css Menu  */
+.menu a{
+    text-transform: uppercase;
+    display: block;
+    color: #191970;
+    padding: 2rem 2rem;
+    position: relative;
+}
+header .container{
+    justify-content: space-between;
+}
+header nav ul li:last-child a{
+    padding-right: 0;
+}
+header nav a.active::before,
+header nav a:hover::before{
+    content: "";
+    border-bottom: 5px solid #ff8c00;
+    top:65%;
+    width: 40%;
+    position: absolute;
+}
+.icon-nav{
+    width: 35px;
+    height: 35px;
+    
+}
+.icon-nav span{
+    width: 100%;
+    height: 3px;
+    background-color: #ff8c00;
+    border: 1px solid #ff8c00;
+    display: block;
+}
+/* footer */
+
+footer{
+    background-color: #111111;
+    padding: 1rem 0;
+}
+footer h1,h2,h3,h4,h5,h6,p,a{
+    color: #fff;
+}
+footer h1,h2,h3,h4,h5,h6{
+    font-family: Gotham-Medium;
+    position: relative;
+    margin-bottom: 1rem;
+}
+footer a,p{
+    font-family: Gotham-Thin;
+}
+footer .row{
+    justify-content: space-between;
+}
+footer h5::before{
+    content: "";
+    border-bottom: 4px solid #fff;
+    position: absolute;
+    top: 70%;
+    width: 100px;
+    padding: .1rem 0;
+
+}
+/* tin tuc  */
+#tintuc h2{
+    text-align: center;
+    font-family: Gotham-Ultra;
+    color: #191970;
+    position: relative;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    
+}
+#tintuc h2::before{
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #ff8c00;
+    width: 130px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#tintuc .container{
+    margin: 2rem auto;
+    background-color: #fff;
+}
+#tintuc .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+#tintuc .col{
+    width: 360px;
+    margin-bottom: 1rem;
+}
+#tintuc .img{
+    overflow: hidden;
+    cursor: pointer;
+}
+#tintuc img{
+    width: 100%;
+}
+#tintuc img:hover{
+    transform: scale(1.5);
+    transition: all 3s;
+}
+#tintuc h4 a{
+    color: #ff8c00 ;
+    font-family: Gotham-Medium;
+}
+#tintuc p{
+    color: #000;
+    font-family: Gotham-Medium;
+}
+#tintuc h4{
+    margin: 1rem 0;
+}
+
+/* responsive  */
+@media (max-width: 575.98px) {
+
+    html,body{
+        font-size: 10px;
+    }
+    .container {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+    .menu ul{
+        display: none;
+    }
+}

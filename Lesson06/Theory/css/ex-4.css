@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html , body{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    border: 1px solid green;
+    margin: .5rem auto;
+    width: 420px;
+}
+#zone1 .container{
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+}
+.navBar, .body-content{
+    border: 1px solid green;
+
+}
+.navBar{
+    width: 320px;
+}
+.body-content{
+    width: calc(100% - 230px);
+    min-height: 400px;
+}
+.body-content p{
+    margin-left: 1rem;
+}
+
+.navBar nav{
+    background-color: #484848;
+}
+.navBar nav a{
+    display: block;
+    padding: .5rem;
+    color: tan;
+    border-bottom: 1px solid #fff;
+}
+.navBar a:hover{
+    color: teal;
+    background-color: thistle;
+}

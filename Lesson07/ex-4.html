@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #zone1>div{
+            border: 10px solid green;
+            width: 30rem;
+            height: 30rem;
+            animation: example 5s infinite;
+            /* overflow: hidden; */
+            position: relative;
+            
+        }
+        img{
+            width: 100%;
+        }
+        #zone1 p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            line-height: 1.5;
+
+            transform: translate(-50%,-50%);
+            background-color: brown;
+            opacity: 0.6;
+        }
+        #zone1 a{
+            color: chartreuse;
+            text-decoration: none;
+            padding: 20px;
+        }
+        div:hover img{
+            transform: scale(1.5);
+            transition: all 3s ;
+            cursor: pointer;
+        }
+        @keyframes example{
+        0%{background-color: red;}
+        25%{background-color: yellow;}
+        50%{background-color: blue;}
+        100%{background-color: green;}
+    }
+    </style>
+</head>
+<body>
+    <section id="zone1">
+        <div>
+            <img src="./goku-removebg-preview.png" alt="">
+            <p> <a href="">Xem chi tiết</a></p>
+        </div>
+    </section>
+</body>
+</html>

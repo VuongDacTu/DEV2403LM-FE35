@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html , body{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+nav{
+    background-color: #484848;
+    margin: 1rem 10%;
+}
+nav ul{
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+nav ul li a{
+    color: tan;
+    display: block;
+    padding: .5rem 1rem;
+    border-right: 1px solid #fff;
+}
+nav ul li:last-child a{
+    border: 0;
+}
+nav a:hover{
+    background-color: #CCC;
+    color: yellow;
+    
+}

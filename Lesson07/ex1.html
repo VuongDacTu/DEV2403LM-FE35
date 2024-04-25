@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+        div{
+            border: 3px solid red;
+            width: 10rem;
+            height: 10rem;
+            margin: .5rem;
+        }
+        @keyframes div1{
+            from{background-color: red;}
+            to{background-color: yellow;}
+        }
+        @keyframes div2{
+            from{background-color: blue;}
+            to{background-color: green;}
+        }
+        div:nth-child(2n){
+            background-color: green;
+            animation: div1 4s infinite;
+        }
+        div:nth-child(2n+1){
+            background-color: olive;
+            animation: div2 5s  infinite;
+        }
+
+    </style>
+  </head>
+  <body>
+    <section id="zone1">
+      <h1>Animation</h1>
+    </section>
+    <hr />
+    <div>1</div>
+    <div>2</div>
+  </body>
+</html>

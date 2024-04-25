@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        list-style: none;
+        color: black;
+        padding: 1rem 2rem;
+        margin-left: 5px;
+        background-color: #ccc;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .active{
+        background-color: blueviolet;
+        color: white;
+    }
+    ul{
+        display: flex;
+    }
+    #content{
+        border: 1px solid #ccc;
+    }
+    p{
+        font-size: 50px;
+    }
+</style>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li data-content="Lab7.4.1" class="active">HTML</li>
+                    <li data-content="Lab7.4.2">CSS</li>
+                    <li data-content="Lab7.4.3">Jquery</li>
+                    <li data-content="Lab7.4.4">PHP</li>
+                </ul>
+            </nav>
+        </header>
+        <section id="content">
+            <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        </section>
+        <!-- nhúng thư viện jquery từ cloud -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- mã lệnh xử lý js với query -->
+        <script>
+            $(document).ready(function(){
+                $("li").css("cursor","pointer")
+                $("li").click(function(){
+                    path = $(this).attr("data-content")
+                    $("li").removeClass("active")
+                    $(this).addClass("active")
+                    $("#content").load("./"+path+".html")
+                })
+            });
+        </script>
+    </body>
+</html>

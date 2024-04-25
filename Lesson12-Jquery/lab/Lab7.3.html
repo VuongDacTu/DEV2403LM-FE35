@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    .imgOption{
+        display: flex;
+        justify-content: space-between;
+    }
+    .imgOption img{
+        width: 16%;
+        height: auto;
+    }
+    .imgShow img{
+        width: 50%;
+        height: auto;
+    }
+    .imgShow{
+        text-align: center;
+    }
+    .active{
+        border: 3px solid red;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="imgShow">
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/pho-co-ha-noi.jpg" alt />
+        </div>
+        <div class="imgOption">
+            <img class="active" src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/pho-co-ha-noi.jpg" alt />
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/20-chua-tran-quoc.jpg" alt />
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/chua-mot-cot.jpg" alt />
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/Ho-guom.jpg" alt />
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/Ho-Tay.jpg" alt />
+            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2021/11/thang-long.jpg" alt />
+        </div>
+    </section>
+    <!-- nhúng thư viện jquery từ cloud -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- mã lệnh xử lý js với query -->
+    <script>
+        $(document).ready(function () {
+            $(".imgOption > img").click(function(){
+                img = $(this).attr("src")
+                $(".imgShow > img").attr("src",img)
+                $("img").removeClass("active")
+                $(this).addClass("active")
+            })
+        });
+    </script>
+</body>
+
+</html>
